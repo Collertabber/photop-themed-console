@@ -1,0 +1,354 @@
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.consoleText {
+font-family: 'Poppins', sans-serif;
+color: white
+}
+h1 {
+color: white
+text-align: left;
+position: fixed;
+bottom: 125px;
+}
+p {
+color: white
+}
+.arrow {
+font-size: 30px;
+color: white;
+text-align: left;
+position: fixed;
+bottom: -10px;
+left: 677px;
+}
+.box {
+  outline: #1f1f28 solid 10px;
+  background-color: #24242e;
+  box-sizing: border-box;
+  padding: 20px;
+  position: fixed;
+  height: 225px;
+  width: 100%;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.cbb1 {
+  transition: 0.6s;
+  border: none;
+  color: white;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  top: -5px;
+  left: 5px;
+}
+.cbb2 {
+  transition: 0.6s;
+  border: none;
+  color: white;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  top: -5px;
+  left: 123px;
+}
+.cbb3 {
+  transition: 0.6s;
+  border: none;
+  color: white;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  top: -5px;
+  left: 241px;
+}
+.cbb4 {
+  transition: 0.6s;
+  border: none;
+  color: white;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  top: -5px;
+  left: 365.5px;
+}
+.cbb5 {
+  transition: 0.6s;
+  border: none;
+  color: white;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  top: -5px;
+  left: 468px;
+}
+.console {
+  font-family: 'Poppins', sans-serif;
+  width: 640px;
+  height: 130px;
+  outline: #1f1f28 solid 5px;
+  position: absolute;
+  top: 27px;
+  left: 25px;
+  overflow: scroll;
+}
+.consoleInput {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: #24242e;
+  width: 640px;
+  height: 30px;
+  outline: #1f1f28 solid 5px;
+  position: fixed;
+  position: absolute;
+  top: 177px;
+  left: 25px;
+}
+.consoleExecute {
+  transition: 0.6s;
+  width: 30px;
+  height: 30px;
+  outline: #5AB7FA solid 5px;
+  background-color: #5AB7FA;
+  border: none;
+  opacity: 1;
+  cursor: pointer;
+  font-family: 'Sans', sans-serif;
+  position: absolute;
+  top: 177px;
+  left: 668px;
+}
+.consoleExecute:hover {
+  opacity: .5;
+  /* transform: rotateX(360deg); */
+}
+.elements {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  width: 640px;
+  height: 130px;
+  outline: #1f1f28 solid 5px;
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  overflow: scroll;
+}
+.sources1 {
+  font-family: 'Poppins', sans-serif;
+  width: 173px;
+  height: 170px;
+  outline: #1f1f28 solid 5px;
+  position: absolute;
+  top: 27px;
+  left: 25px;
+  overflow: scroll;
+}
+.sources2 {
+  font-family: 'Poppins', sans-serif;
+  width: 173px;
+  height: 170px;
+  outline: #1f1f28 solid 5px;
+  position: absolute;
+  top: 27px;
+  left: 218px;
+  overflow: scroll;
+} 
+.sources3 {
+  font-family: 'Poppins', sans-serif;
+  width: 173px;
+  height: 170px;
+  outline: #1f1f28 solid 5px;
+  position: absolute;
+  top: 27px;
+  left: 412px;
+  overflow: scroll;
+}
+.tab {
+scale: 100%;
+outline: #1f1f28 solid 5px;
+background-color: #24242e;
+padding: 5px 32px;
+}
+.tab:hover {
+  animation-name: sizeUp;
+  animation-duration: 0.7s;
+  z-index: 9;
+  scale: 115%;
+  color: black;
+  background-color: #5AB7FA;
+  outline: #5AB7FA solid 5px;
+  /* transform: rotateX(360deg); */
+}
+.tab:not(:hover) {
+  animation-name: sizeDown;
+  animation-duration: 0.7s;
+}
+.tab:active {
+  animation-name: click;
+  animation-duration: 1s;
+}
+
+@keyframes sizeUp {
+  0% {
+    z-index: 9;
+    scale: 100%;
+  }
+  100% {
+    z-index: 9;
+    scale: 115%;
+  }
+}
+
+@keyframes sizeDown {
+  0% {
+    z-index: 9;
+    scale: 115%;
+  }
+  100% {
+    z-index: 9;
+    scale: 100%;
+  }
+}
+
+@keyframes keepSize {
+  0% {
+    z-index: 9;
+    scale: 115%;
+  }
+  100% {
+    z-index: 9;
+    scale: 115%;
+  }
+}
+
+
+@keyframes click {
+  0% {
+    z-index: 9;
+    scale: 125%;
+  }
+  100% {
+    z-index: 9;
+    scale: 50%;;
+  }
+  150% {
+    z-index: 9;
+    scale: 100%;;
+  }
+}
+</style>
+<div id="consoleBox" class="box">
+<div id="buttons">
+<button id="tab" class="cbb1 tab" onclick="openPage(1);">Console</button>
+<button id="tab1" class="cbb2 tab" onclick="openPage(2);">Sources</button>
+<button id="tab2" class="cbb3 tab" onclick="openPage(3);">Elements</button>
+<button id="tab3" class="cbb4 tab" onclick="openPage(4);">Tools</button>
+</div>
+</div>
+<script>
+let colors = ["✓", "white", "⚠", "yellow", "⯃", "red"];
+let placeholder = 'console.log("Hello&#160world!");'
+let pages = ['<h1 class="consoleText">Photop themed developer console</h1><br><br><br><p class="consoleText">Made by <a href="https://app.photop.live/?user=634d9def73acb4401e1b86ea#profile">Siri</a> :D</p>', '<p id="console" class="console"></p><input type="text" id="consoleInput" class="consoleInput" placeholder=' + placeholder + ' value=""></input><button onclick="getValue()" class="consoleExecute"><h2 class="arrow">></h2></button>', '<p id="jsfiles" class="sources1">JS:</p> <p id="cssfiles" class="sources2">CSS:</p> <p id="otherfiles" class="sources3">Other:</p>', '<div id="elements" class="elements"></div>', '<div id="storage" class="elements"></div>']
+loadPage(0);
+function loadPage(val) {
+if (document.getElementById("pageHolder") != null) {
+document.getElementById("pageHolder").remove();
+}
+let div = document.createElement('div');
+div.id = "pageHolder"
+div.innerHTML = pages[val];
+document.getElementById("consoleBox").appendChild(div)
+if (val == "1") {
+let textarea = document.getElementById("execute");
+}
+if (val == "2") {
+getFiles();
+}
+if (val == "3") {
+let b = document.getElementsByTagName("html")[0].innerHTML;
+let div = document.createElement("div");
+div.textContent = div.textContent + b;
+document.getElementById("elements").appendChild(div)
+}
+if (val == "4") {
+let b = "Local Storage: " + JSON.stringify(localStorage);
+let div = document.createElement("div");
+div.textContent = div.textContent + b;
+document.getElementById("storage").appendChild(div)
+b = "Session Storage: " + JSON.stringify(sessionStorage);
+div = document.createElement("div");
+div.textContent = div.textContent + b;
+document.getElementById("storage").appendChild(div);
+}
+}
+function getFiles() {
+var entries = performance.getEntriesByType('resource');
+entries.map(function(entry) {
+    let a = entry.name.split("/");
+    a = a[a.length - 1].split("?");
+    let div = document.createElement("div");
+    div.textContent = div.textContent + a[0];
+    let type = a[0].slice((Math.max(0, a[0].lastIndexOf(".")) || Infinity) + 1);
+    if (type === 'js') {
+    document.getElementById("jsfiles").appendChild(div);
+    } else if (type === 'css') {
+    document.getElementById("cssfiles").appendChild(div);
+    } else if (type != '') {
+    document.getElementById("otherfiles").appendChild(div);
+    }
+});
+}
+
+function getValue() {
+  let a = document.getElementById("consoleInput").value;
+  createLog(a, 0);
+  document.getElementById("consoleInput").value = '';
+}
+
+function createLog(code, num) {
+let result = eval(code);
+let div = document.createElement("div");
+let colorValue = num * 2;
+colorValue = colorValue + 2;
+div.style.color = colors[colorValue - 1];
+div.textContent = div.textContent + colors[colorValue - 2] + " " + result;
+document.getElementById("console").appendChild(div)
+}
+
+var buttons = document.getElementsByTagName('button');
+for (i = 0; i < buttons.length; i++) {
+  if (buttons[i].id.includes("tab")) {
+  buttons[i].onmouseenter = function() {
+    let sound = new Audio('https://collertabber.github.io/photop-themed-console/hover.mp3');
+    sound.play();
+    }
+  }
+}
+
+function openPage(val) {
+let sound = new Audio('https://collertabber.github.io/photop-themed-console/button-pressed-38129.mp3');
+sound.play();
+let page = val;
+loadPage(val);
+}
+</script>
